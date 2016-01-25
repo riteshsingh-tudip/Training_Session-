@@ -1,0 +1,23 @@
+
+Set the view port because pages are optimized for variety of devices so it must include a meta viewport 
+elememnt inside the head tag.
+viewport tells the browser that how to control browsers page dimension and scaling.
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+Name is the name for viewport.
+Include width=device-width to match the screen's width in device-independent pixels.
+Include initial-scale=1 to establish a 1:1 relationship between CSS pixels and device-independent pixels.
+
+Some browsers will keep the page's width constant while rotating or zooming rather than fiiling the screen,
+thus adding the attribute initial-scale=1 instructs the browser to eastablish 1:1 realtionship between CSS 
+pixels and device-independent pixels regardless of device orientation,thus allows the page to take advantage
+of full landscape width.
+
+inital-scale can be replaced with the followings.
+
+minimum-scale
+maximum-scale
+user-scalable
+
+these may disable the user's ability to zoom the viewport,causing accessibility issue.

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="assignment.js"></script>
+  <script src="ata.json"></script>
+  <link rel="stylesheet" type="text/css" href="default.css">
+ <h1>Student Information</h1>
+ </head>
+ <body>
+ 
+ <div>
+ <button id="update" class="button">Update</button>
+ <button id="remove" class="button">Remove</button>
+ <button id="add" class="button">Add</button>
+</div>
+
+<div id="addstudent">
+  <input type="text" id = "f1" placeholder="First Name"> 
+  <input type="text" id = "l1" placeholder="Last Name"> 
+  <input type="number" id = "r1" placeholder="Roll Number">
+  <input type="text" id = "s1" placeholder="Subject">  
+  <button id="closeAddStu" onClick="addStudentInfo()" >Add to Database</button>
+</div>
+
+<div id="removestudent">
+<input type="text" class="button" id = "deleteByName" placeholder="Enter Name To delete:">
+<button class="closeDelStu" onClick="deleteStudent()">Delete</button>
+</div>
+
+<div id="updatestudent">
+<input type="text" id = "updateFirstName" placeholder="First Name">
+<input type="text" id = "updateLasttName" placeholder="Last Name">
+<input type="text" id = "updateRollNo" placeholder="Roll No">
+<input type="text" id = "updateSubjects"placeholder="Subject">
+<button id="updateInDb" onClick="updateInDb()">Update</button>
+</div>
+
+
+
+<br>
+<span>Show Student List</span>
+<button id ="flip" onClick="showStudentList()"></button>
+<div id="studentDiv"></div>
+
+  
+</body>
+</html>
+ 

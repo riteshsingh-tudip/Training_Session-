@@ -1,0 +1,30 @@
+git config --global user.name "Vishwesh Joshi"
+
+git config --global user.email "vishwesh.joshi@tudip.nl"
+
+git config --list
+
+git clone url
+
+git status
+
+git add filename                 //for specific file
+git add -A        //for all untrack file
+
+git reset HEAD filename    //to unstage the file
+
+git commit -m "commit message"   //to commit the file
+
+git push origin branchname    //to push the commit into remote repository
+
+git checkout master     //switch to master
+
+git branch branchname    //create a branch
+
+git branch      //to know all the branch
+ 
+git checkout branchname   //switch to branch
+
+git push origin master    //for first time
+
+https://try.github.io/    //for git

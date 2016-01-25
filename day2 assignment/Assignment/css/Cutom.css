@@ -1,0 +1,19 @@
+.animate {
+    position: relative;
+    -webkit-animation: mymove 5s infinite; 
+    animation: mymove 5s infinite;
+}
+
+
+
+.linear {animation-timing-function: linear;}
+.ease {animation-timing-function: ease;}
+.ease-in {animation-timing-function: ease-in;}
+.ease-out {animation-timing-function: ease-out;}
+.ease-in-out {animation-timing-function: ease-in-out;}
+
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 800px;}
+}

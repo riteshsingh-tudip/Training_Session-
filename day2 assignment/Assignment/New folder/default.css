@@ -1,0 +1,34 @@
+#studentDiv, #flip {
+//border: solid 1px;
+border-collapse:collapse;
+}
+
+
+#studentDiv {
+padding: 30px;
+display: blue;
+}
+
+.button
+	{
+		display: inline-block;
+		margin-top: 2em;
+		padding: 1em 2em 1em 2em;
+		background: #3e9f38;
+		border-bottom: 4px solid #9e1506;
+		letter-spacing: 0.20em;
+		text-decoration: none;
+		text-transform: uppercase;
+		//font-weight: 400;
+		font-size: 0.90em;
+		color: #0000;
+		font-size:20px;
+		font-family:Berlin Sans FB Demi;
+	}
+
+
+button, div, input{
+padding:3px;
+}
+
+ 

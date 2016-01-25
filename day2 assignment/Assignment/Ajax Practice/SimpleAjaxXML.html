@@ -1,0 +1,31 @@
+<!--Example with XMLResponse------>
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo"><h2>Let AJAX change this text</h2></div>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+<div > India ,China </div>
+<script>
+function loadDoc() {
+  var xhttp, xmlDoc, txt, x, i;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+  if (xhttp.readyState == 4 && xhttp.status == 200) {
+    xmlDoc = xhttp.responseXML;
+    txt = "";
+    x = xmlDoc.getElementsByTagName("name");
+    for (i = 0; i < x.length; i++) {
+      txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
+    }
+  };
+  xhttp.open("GET", "Data.xml", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+//browser specific request as IE5 and IE6 does not 
+//support XMLHttpRequest.
+
+//window works same as document in javascript.
+//so instead of  $document one can use window.
+
+//XMLHttpRequest is used to exchange data with server.
+
+
+
+var xhttp;
+if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+
+//----------------------------Simple Ajax Script-------------
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+
+
+
+//onreadystatechange	Stores a function (or the name of a function) to be called automatically each time the readyState property changes
+//readyState	Holds the status of the XMLHttpRequest. Changes from 0 to 4: 
+		0: request not initialized 
+		1: server connection established
+		2: request received 
+		3: processing request 
+		4: request finished and response is ready
+//status	200: "OK"
+	404: Page not found
+
+//To send a request to server we use open() and send() 
+
+//open(method, url, async)	Specifies the type of request
+
+//method : the type of request: GET or POST
+//url : the server (file) location
+//async :  true (asynchronous) or false (synchronous)
+
+//send()	Sends the request to the server (used for GET)
+//send(string)	Sends the request to the server (used for POST)
+
+
+
+//-----------------------------------Post Request with strin argument----------------
+
+
+xhttp.open("POST", "ajax_test.asp", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("fname=Henry&lname=Ford");
+
+
+
+//To post data from an Html form add an HTTP Header with setRequestHeader()
+//Specify the data you want to send in the send method.
+
+//setRequestHeader(header, value)  	Adds HTTP headers to the request
+
+//header : specifies the header name (here it is Content-type)
+//value   : specifies the header value  (here it says "application/x-www-form-urlencoded").
+
+
+//Always keep ashyncronus to true ,beacause keeping false will cause the page
+//to reamain in idle state untill the response is processed.
+
+
+
+//--------To get the Response From Server..---------------------------
+
+
+//responseText	get the response data as a string
+//responseXML	get the response data as XML data
+

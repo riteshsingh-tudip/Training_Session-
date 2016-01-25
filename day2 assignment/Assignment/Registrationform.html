@@ -1,0 +1,103 @@
+﻿<html>
+<head>
+<title>Tudip</title>
+<style>
+body
+{
+	background-color:#EEE8AA;
+
+	
+}
+header
+{
+	background-color:#Grey;
+	text-align:center;
+	padding:10px; 
+	font-size:30px;
+	height:100px;
+	color:#4B0082;
+}
+footer 
+{
+    background-color:Grey;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;    
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Registration Form</h1>
+</header>
+<form name="register" action="login.html" method="post" onsubmit="return check_validation();" >
+        <p>&nbsp;</p>
+<table width="714" border="0" align="center">
+	<tr>
+      		<td height="33">First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      		<td>:</td>
+      		<td><input class="validate[required,custom[onlyLetterSp]] text-input" type="text" name="fname" id="fname" />*</td>
+    	</tr>
+         	<tr>
+      		<td height="33">Last Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>:</td>
+		<td><input class="validate[required,custom[onlyLetterSp]] text-input" type="text" name="lname" id="lname" />*</td>	
+	</tr>
+    	<tr>
+      		<td height="46">Email Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    		<td>:</td>
+     		 <td><input type="email" name="email" id="email"  placeholder="Enter Email ID" class="validate[required,custom[email]] text-input" required />*</td>
+    	</tr>
+            	<tr>
+      		<td height="33">Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      		<td>:</td>
+      		<td><textarea rows="5" cols="30" name="address" style="width: 230px; height: 100px;" id="adr" required="required" > </textarea>*</td>
+    	</tr>
+    	<tr>
+      		<td height="33">Mobile No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      		<td>:</td>
+      		<td><input class="validate[required,custom[onlyLetterSp]] text-input" type="text" name="contactno" maxlength="12" minlength="10" /> *</td>
+    	</tr>
+      	<tr>
+      		<td height="35">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      		<td>:</td>
+      		<td><select name="gender" id="gender" class="validate[required]">
+ 		 <option value=""> Choose a value</option>                   
+          		<option value="male">Male</option>
+          		<option val="female">Female</option></select>*</td>
+   	 </tr>      
+     	<tr>
+       		 <td height="34"> Username</td>
+        		<td>:</td>
+      		<td><input class="validate[required] text-input" type="text" name="uname" id="uname" required />*</td>
+        	</tr>
+    	<tr>
+      		<td height="34">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+      		<td>:</td>
+      		<td><input class="validate[required] text-input" type="password" name="password" id="password" required />*</td>
+  	</tr>
+           	 <tr>
+      		<td height="34">Profile Photo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+      		<td>:</td>
+      		<td><input type="file" name="file" id="basicinput"  class="span8" required="required" ></input>*</td>
+    	</tr>
+   	<tr>
+      		<td></td>
+     		 <td></td>
+      		<td><input type="checkbox" name="agree" value="Yes" />
+        		I agree to Privacy Policy &amp;<a href="terms_condition.php">Terms and Conditions</a>.*</td>
+    	</tr>
+    	<tr>
+      		<td>&nbsp;</td>
+      		<td height="40">&nbsp;</td>
+      		<td><input type="submit"  value="Create Account" /></td>
+    	</tr>
+  </table>
+</form>
+
+<footer>
+Copyright©tudip.com
+</footer>
+</body>
+</html>

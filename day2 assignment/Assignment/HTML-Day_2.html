@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			$('#bs-sidebar-navbar-collapse-1 a').collapse().click(function(e) { 
+		  	$('#content').hide().load( $(this).attr('href') , function(){
+				 $('#content').show()})
+		  	return false
+			})
+		})
+	</script> 
+
+
+</head>
+<body>
+	
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Resources\VolleyballBall.jpg" alt="Volley Ball">
+			</div>
+			<div class="col-md-10" style="background-color: lightblue;">
+				<h1 > Volley Ball <small> Pass The Expectations...Set The Standards...N..Kill The Competition...</small></h1>
+			</div>
+		</div>
+		<div class="row">
+  			<div class="col-md-2">
+				<nav class="navbar navbar-default sidebar" role="navigation">
+				<div class="container-fluid">
+    					<div  class="navbar-header">
+      						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        						<span class="sr-only">Toggle navigation</span>
+        						<span class="icon-bar"></span>
+        						<span class="icon-bar"></span>
+        						<span class="icon-bar"></span>
+      						</button>      
+    					</div>
+        						<div  class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+          							<ul class="nav navbar-nav">
+            								<li class="active"><a href="HTML-Day_2.html" target="_self">Home</a></li>			
+            								<li class="dropdown">
+									<a href="demo.html">Court</a>
+								</li>
+            								<li><a href="f.html" >Skills</a></li>
+            								<li><a href="f.html">Rules</a></li>
+            								<li><a href="f.html">Reviews <span class="badge">1,118</span></a></li>
+          							</ul>
+        						</div><!--/.nav-collapse -->
+    				</div>
+				</nav>
+  			</div>
+  			<div id="content" class="col-md-10">
+    				Main content goes here
+  			</div>
+		</div>
+
+</body>
+</html>
